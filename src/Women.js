@@ -4,10 +4,10 @@ import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
 import Rating from '@mui/material/Rating';
 
-function Card({data}){
+function Women({data}){
     if(data.length === 0 )return null
     else{ 
-        let result = data.filter(obj => obj.category === "men's clothing")
+        let result = data.filter(obj => obj.category === "women's clothing")
         return(
         <Grid container spacing={ 2 }>
         {result.map((item) => (
@@ -24,4 +24,4 @@ function Card({data}){
     )}
 }
 
-export default Card;
+export default Women;

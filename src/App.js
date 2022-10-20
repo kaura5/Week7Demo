@@ -3,6 +3,8 @@ import './App.css';
 import Container from '@mui/material/Container';
 import Header from './Header';
 import Card from './Card';
+import {Routes, Route} from 'react-router-dom';
+import Women from './Women';
 
 function App() {
   const [data, setData] = useState([]);
@@ -18,7 +20,11 @@ function App() {
     <div className="App">
       <Container>
         <Header />
-        <Card data={data}/>
+        
+        <Routes>
+          <Route path="/" element={<Card data={data}/>} />
+          <Route path="/women" element={<Women data={data}/>} />
+          </Routes>
       </Container>
     </div>
   );
